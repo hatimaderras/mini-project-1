@@ -26,6 +26,7 @@ scanf("%d",&user);
 
 
 switch(user){
+
     case 1:
         printf("how many n");
         scanf("%d",&n);
@@ -55,19 +56,24 @@ switch(user){
                  printf("name searched for found :%s %d\n",search , s1[i].number);
 
             }
+}
+        break;
+    case 4:
+        printf("enter name to delete");
+        scanf("%s",search);
+        for(i=0;i<n;i++){
+            if(strcmp(search,s1[i].name)==0){
 
+                        s1[i]=s1[i+1];
+                        n--;
+                    }
 
-
+            }
+    default:
+        break;
         }
 
 
-
-        break;
-    case 4:
-        break;
-    default:
-        break;
-}
 } while(user != 5);
 }
 
