@@ -1,16 +1,18 @@
 
 #include <stdio.h>
+
 int main (){
 
         int user;
         int i;
-struct person{
+        int n;
+typedef struct person{
 
         char name[50];
         int number;
-};
-struct person h1;
-struct person h2;
+}pers;
+
+pers s1[50];
 do{
  printf("1:Ajouter un contact\n");
 printf("2:Afficher tous les contacts\n");
@@ -24,24 +26,22 @@ scanf("%d",&user);
 
 switch(user){
     case 1:
-
+        printf("how many n");
+        scanf("%d",&n);
+     for(i=0;i<n;i++){
             printf("enter your number:\n");
-            scanf("%d",&h1.number);
+            scanf("%d",&s1[i].number);
             printf("enter your name:\n");
-            scanf("%s",&h1.name);
-            printf("enter your number:\n");
-            scanf("%d",&h2.number);
-            printf("enter your name:\n");
-            scanf("%s",&h2.name);
+            scanf("%s",&s1[i].name);
+            }
 
 
         break;
     case 2:
-
-                 printf(" name is %s :\n",h1.name);
-                 printf(" number is %d :\n",h1.number);
-                 printf(" name is %s :\n",h2.name);
-                 printf(" number is %d :\n",h2.number);
+   for(i=0;i<n;i++){
+        printf("contact:%d\n",i+1);
+   printf("name:%s \n numbers:%d \n",s1[i].name ,s1[i].number);
+   }
 
         break;
     case 3:
