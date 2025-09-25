@@ -50,9 +50,9 @@ switch(user){
         printf("enter name you want to search:");
         scanf("%s",search);
         for(i=0;i<n;i++){
-             int result=strcmp(search,s1[i].name);
-            if(result==0){
-                 printf("name searched for found :%s\n",search);
+
+            if(strcmp(search,s1[i].name) == 0){
+                 printf("name searched for found :%s %d\n",search , s1[i].number);
 
             }
 
