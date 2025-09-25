@@ -1,11 +1,12 @@
 
 #include <stdio.h>
-
+#include <string.h>
 int main (){
 
         int user;
         int i;
         int n;
+        char search[50];
 typedef struct person{
 
         char name[50];
@@ -38,6 +39,7 @@ switch(user){
 
         break;
     case 2:
+
    for(i=0;i<n;i++){
         printf("contact:%d\n",i+1);
    printf("name:%s \n numbers:%d \n",s1[i].name ,s1[i].number);
@@ -45,6 +47,21 @@ switch(user){
 
         break;
     case 3:
+        printf("enter name you want to search:");
+        scanf("%s",search);
+        for(i=0;i<n;i++){
+             int result=strcmp(search,s1[i].name);
+            if(result==0){
+                 printf("name searched for found :%s\n",search);
+
+            }
+
+
+
+        }
+
+
+
         break;
     case 4:
         break;
